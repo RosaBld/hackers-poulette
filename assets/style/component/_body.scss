@@ -1,0 +1,119 @@
+body {
+    background: rgb(17,24,39);
+    background: linear-gradient(0deg, rgba(17,24,39,1) 0%, rgba(39,36,89,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        border-radius: 5px;
+        margin: 0 auto;
+        padding:50px 00px 50px 50px;
+        background: #0D8187;
+        margin-bottom: 50px;
+        
+        .labels {
+            font-family: 'Bellota';
+            color: #303030;
+            width: 5rem;
+        }
+    
+        input {
+            border-radius: 5px;
+            color: #303030;
+            font-family: 'Bellota';
+            margin-bottom: 10px;
+        }
+    
+        select {
+            border-radius: 5px;
+            font-family: 'Bellota';
+            color: #303030;
+            margin-bottom: 10px;
+        }
+    
+        .message {
+            width: 250px;
+            height: 250px;
+        }
+    }
+    
+    .submit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 188px;
+        height: 50px; 
+        background: #0D8187;
+        margin: 0 auto;
+        border-radius: 50px;
+        font-family: 'Bellota';
+        color: #303030;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .form {
+        padding: 5%;
+        align-items: flex-start;
+
+        
+        .labels {
+            font-family: 'Bellota';
+            color: #303030;
+            width: 5rem;
+        }
+    
+        input {
+            border-radius: 5px;
+            color: #303030;
+            font-family: 'Bellota';
+            margin-bottom: 10px;
+        }
+    
+        select {
+            border-radius: 5px;
+            font-family: 'Bellota';
+            color: #303030;
+            margin-bottom: 10px;
+        }
+    
+        .name {
+            display: flex;
+            flex-direction: row;
+            gap: 100px;
+        }
+    
+        .infos {
+            display: flex;
+            flex-direction: row;
+            gap: 100px;
+        }
+    
+        .message {
+            width: 450px;
+            height: 250px;
+        }
+    }
+    
+    .submit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 188px;
+        height: 50px; 
+        background: #0D8187;
+        margin: 0 auto;
+        border-radius: 50px;
+        font-family: 'Bellota';
+        color: #303030;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
