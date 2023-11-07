@@ -1,40 +1,48 @@
 <htm>
-    <div class="contact">
-        <form method="post" action="index.php">
-            <div class="form">
-                <div class="name">
-                    <div class="last">
-                        <label class="labels" for="lastname">LastName:</label>
-                        <br>
-                        <input type="text" class="lastname" name="lastname"/>
+    <body>
+        <div class="contact">
+            <form novalidate method="post" action="index.php">
+                <div class="form">
+
+                    <div class="name">
+                        <div class="last">
+                            <label class="labels" for="lastname">LastName:</label>
+                            <br>
+                            <input type="text" class="lastname" name="lastname"/>
+                            <div id="lastname-error" class="error-message"></div>
+                        </div>
+                        <div class="first">
+                            <label class="labels" for="firstname">FirstName:</label>
+                            <br>
+                            <input type="text" class="firstname" name="firstname" required/>
+                            <div id="firstname-error" class="error-message"></div>
+                        </div>
                     </div>
-                    <div class="first">
-                        <label class="labels" for="firstname">FirstName:</label>
-                        <br>
-                        <input type="text" class="firstname" name="firstname"/>
+
+                    <div class="infos">
+                        <div class="contact">
+                            <label class="labels" for="mail">eMail:</label>
+                            <br>
+                            <input type="text" class="mail" name="mail" required/>
+                            <div id="mail-error" class="error-message"></div>
+                        </div>
+                        <div class="genders">
+                            <label class="labels">Gender:</label>
+                            <br>
+                            <label for="male">M</label>
+                            <input type="radio" id="male" name="gender" value="Mr">
+                            <label for="female">F</label>
+                            <input type="radio" id="female" name="gender" value="Ms">
+                            <label for="other">O</label>
+                            <input type="radio" id="other" name="gender" value="O">
+                            <div id="gender-error" class="error-message"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="infos">
-                    <div class="contact">
-                        <label class="labels" for="mail">eMail:</label>
+
+                    <div class="moreInfo">
+                        <label class="labels" for="country">Country:</label>
                         <br>
-                        <input type="text" class="mail" name="mail"/>
-                    </div>
-                    <div class="genders">
-                        <label class="labels" for="gender">Gender:</label>
-                        <br>
-                        <label for="male">M</label>
-                        <input type="radio" id="male" name="gender" value="M">
-                        <label for="female">F</label>
-                        <input type="radio" id="female" name="gender" value="F">
-                        <label for="other">O</label>
-                        <input type="radio" id="Other" name="gender" value="O">
-                    </div>
-                </div>
-                <div class="moreInfo">
-                    <label class="labels" for="country">Country:</label>
-                    <br>
-                    <select id="inputcountry" name="country">
+                        <select id="inputcountry" name="country">
                             <option value="">Select your country</option>
                             <option value="Afganistan">Afghanistan</option>
                             <option value="Albania">Albania</option>
@@ -283,28 +291,127 @@
                             <option value="Zambia">Zambia</option>
                             <option value="Zimbabwe">Zimbabwe</option>
                         </select>
+                        <div id="country-error" class="error-message"></div>
+                    </div>
+
+                    <div class="complaint">
+                        <label class="labels" for="subject">Subject:</label>
+                        <br>
+                        <select class="subject" name="subject">
+                            <option value="">Select your subject</option>
+                            <option value="contact">Contact</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="return">Return</option>
+                        </select>
+                        <div id="subject-error" class="error-message"></div>
+                        <br>
+                        <label class="labels" for="message">Message:</label>
+                        <br>
+                        <input type="text" class="message" name="message" required/>
+                        <div id="message-error" class="error-message"></div>
+                    </div>
                 </div>
-                <div class="complaint">
-                    <label class="labels" for="subject">Subject:</label>
-                    <br>
-                    <select class="subject" name="subject">
-                        <option value="contact">Contact</option>
-                        <option value="complaint">Complaint</option>
-                        <option value="return">Return</option>
-                    </select>
-                    <br>
-                    <label class="labels" for="message">Message:</label>
-                    <br>
-                    <input type="text" class="message" name="message"/>
-                </div>
-            </div>
-            <input class="submit" type="submit" name="submit" value="Send"/>
-        </form>
-    </div>
+
+                <input class="submit" type="submit" name="submit" value="Send"/>
+
+            </form>
+        </div>
+
+        <script>
+            document.querySelector('form').addEventListener('submit', function(event) {
+            
+            const lastname = document.querySelector('input[name="lastname"]');
+            const firstname = document.querySelector('input[name="firstname"]');
+            const mail=document.querySelector('input[name="mail"]');
+            const gender = document.querySelector('input[name="gender"]:checked');
+            const country = document.querySelector('select[name="country"]');
+            const subject = document.querySelector('select[name="subject"]');
+            const message = document.querySelector('input[name="message"]');
+
+           
+            const lastnameError = document.querySelector('#lastname-error');
+            const firstnameError = document.querySelector('#firstname-error');
+            const mailError=document.querySelector('#mail-error');
+            const messageError=document.querySelector('#message-error');
+            const mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            const subjectError=document.querySelector('#subject-error');
+            const countryError=document.querySelector('#country-error');
+            const genderError=document.querySelector('#gender-error');
+            
+
+            lastnameError.textContent = '';
+            firstnameError.textContent = '';
+            mailError.textContent='';
+            messageError.textContent='';
+            subjectError.textContent='';
+            countryError.textContent='';
+            genderError.textContent='';
+            
+
+            
+            if (!lastname.value) {
+                lastnameError.textContent = 'Please, enter your last name.';
+                event.preventDefault();
+            }
+            if (!firstname.value) {
+                firstnameError.textContent = 'Please, enter your first name.';
+                event.preventDefault();
+            }
+            if (!mail.value || !mailRegex.test(mail.value)) {
+            mailError.textContent = 'Please enter a valid email address.';
+            event.preventDefault();
+            }
+            if (!gender) {
+                genderError.textContent = 'Please select a gender.';
+                event.preventDefault();
+            }
+            if (!country.value || country.value==='') {
+                countryError.textContent = 'Please select a country.';
+                event.preventDefault();
+            }
+            if (!subject.value || subject.value==='') {
+                subjectError.textContent = 'Please select a subject.';
+                event.preventDefault();
+            }
+            if (!message.value) {
+                messageError.textContent='Please, enter a message';
+                event.preventDefault();
+            }
+            
+        });
+        </script>
+
+    </body>
 </html>
 
 <?php
-    if (isset ($_POST['lastname'], $_POST['firstname'], $_POST['gender'], $_POST['country'], $_POST['subject'], $_POST['message'])) {
+    if ($_SERVER['REQUEST_METHOD']=='POST'){ 
+
+        $lastname=htmlspecialchars($_POST['lastname']);
+        $firstname=htmlspecialchars($_POST['firstname']);
+        $mail=htmlspecialchars($_POST['mail']);
+        $gender=htmlspecialchars($_POST['gender']);
+        $country=htmlspecialchars($_POST['country']);
+        $subject=htmlspecialchars($_POST['subject']);
+        $message=htmlspecialchars($_POST['message']);
+
+        // if (empty($lastname) || empty($firstname) || empty($gender) || empty($country) || empty($subject) || empty($message)) {
+        //     echo "Please, fill in all fields";
+        // } else {
+        // print_r($_POST);
+        // }
+        $to = 'support@hp.com';
+        $subject = 'Form submission';
+        $message = "Last Name: $lastname\nFirst Name: $firstname\nGender: $gender\nCountry: $country\nSubject: $subject\nMessage: $message";
+    
+        if(mail($to, $subject, $message)) {
+            echo "Email sent successfully";
+        } else {
+            echo "Email sending failed";
+        }
         print_r($_POST);
     }
+
 ?>
+

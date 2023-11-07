@@ -406,6 +406,12 @@ body {
   .form {
     padding: 5%;
     align-items: flex-start;
+    background: #0D8187;
+    margin: 5rem;
+    border-radius: 1%;
+    max-width: 575px;
+    max-height: 515px;
+    justify-content: center;
   }
   .form .labels {
     font-family: "Bellota";
