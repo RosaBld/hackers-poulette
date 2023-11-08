@@ -312,42 +312,6 @@ template {
   display: none;
 }
 
-@media screen and (min-width: 425px) and (max-width: 768px) {
-  .head {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .head img {
-    width: 10rem;
-  }
-  .head h1 {
-    color: white;
-    font-family: "Bellota";
-    text-transform: uppercase;
-    font-size: 44px;
-    font-weight: bold;
-  }
-}
-@media screen and (min-width: 768px) {
-  .head {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .head img {
-    width: 15rem;
-  }
-  .head h1 {
-    color: white;
-    font-family: "Bellota";
-    text-transform: uppercase;
-    font-size: 54px;
-    font-weight: bold;
-  }
-}
 body {
   background: rgb(17, 24, 39);
   background: linear-gradient(0deg, rgb(17, 24, 39) 0%, rgb(39, 36, 89) 100%);
@@ -366,21 +330,12 @@ body {
     background: #0D8187;
     margin-bottom: 50px;
   }
-  .form .labels {
-    font-family: "Bellota";
-    color: #303030;
-    width: 5rem;
-  }
   .form input {
     border-radius: 5px;
-    color: #303030;
-    font-family: "Bellota";
     margin-bottom: 10px;
   }
   .form select {
     border-radius: 5px;
-    font-family: "Bellota";
-    color: #303030;
     margin-bottom: 10px;
   }
   .form .message {
@@ -396,38 +351,29 @@ body {
     background: #0D8187;
     margin: 0 auto;
     border-radius: 50px;
-    font-family: "Bellota";
-    color: #303030;
-    font-size: 20px;
-    font-weight: bold;
   }
 }
 @media screen and (min-width: 768px) {
+  body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
   .form {
-    padding: 5%;
+    padding: 1.5rem;
     align-items: flex-start;
     background: #0D8187;
-    margin: 5rem;
     border-radius: 1%;
-    max-width: 575px;
+    max-width: 600px;
     max-height: 515px;
     justify-content: center;
   }
-  .form .labels {
-    font-family: "Bellota";
-    color: #303030;
-    width: 5rem;
-  }
   .form input {
     border-radius: 5px;
-    color: #303030;
-    font-family: "Bellota";
     margin-bottom: 10px;
   }
   .form select {
     border-radius: 5px;
-    font-family: "Bellota";
-    color: #303030;
     margin-bottom: 10px;
   }
   .form .name {
@@ -441,8 +387,8 @@ body {
     gap: 100px;
   }
   .form .message {
-    width: 450px;
-    height: 250px;
+    width: 570px;
+    height: 150px;
   }
   .submit {
     display: flex;
@@ -453,9 +399,230 @@ body {
     background: #0D8187;
     margin: 0 auto;
     border-radius: 50px;
+    margin-top: 3rem;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .head {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .head img {
+    width: 10rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .head {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+  }
+  .head img {
+    width: 10rem;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .footer {
+    margin: 2rem 0rem 2rem 0rem;
+  }
+  .footer .brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer .brand .hack {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer .brand .hack .imgfoot {
+    height: 5rem;
+  }
+  .footer .brand .logo {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+  }
+  .footer .brand .logo i {
+    padding: 5px;
+  }
+  .footer .brand .logo a {
+    text-decoration: none;
+    color: #0D8187;
+  }
+  .footer .brand .logo a:hover {
+    color: #303030;
+  }
+  .footer .copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+  }
+  .footer .copyright .becode {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    margin: 2rem 0rem 2rem 0rem;
+  }
+  .footer .brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .footer .brand .hack {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .footer .brand .hack .imgfoot {
+    height: 5rem;
+  }
+  .footer .brand .logo {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+  }
+  .footer .brand .logo i {
+    padding: 5px;
+  }
+  .footer .brand .logo a {
+    text-decoration: none;
+    color: #0D8187;
+  }
+  .footer .brand .logo a:hover {
+    color: #303030;
+  }
+  .footer .copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .footer .copyright .becode {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+.good {
+  color: green;
+  font-family: "Bellota";
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.wrong {
+  color: red;
+  font-family: "Bellota";
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  font-family: "Bellota";
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  h1 {
+    color: white;
+    font-family: "Bellota";
+    text-transform: uppercase;
+    font-size: 44px;
+    font-weight: bold;
+  }
+  .labels {
+    font-family: "Bellota";
+    color: #303030;
+    width: 5rem;
+  }
+  .gender {
+    font-family: "Bellota";
+    color: #303030;
+    width: 5rem;
+  }
+  input {
+    color: #303030;
+    font-family: "Bellota";
+  }
+  select {
+    font-family: "Bellota";
+    color: #303030;
+  }
+  .submit {
     font-family: "Bellota";
     color: #303030;
     font-size: 20px;
     font-weight: bold;
+  }
+  h3 {
+    font-family: "Bellota";
+    color: #0D8187;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  h4 {
+    font-family: "Bellota";
+    color: #0D8187;
+    font-size: 8px;
+    font-weight: bold;
+    margin-left: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    color: white;
+    font-family: "Bellota";
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .labels {
+    font-family: "Bellota";
+    color: #303030;
+    width: 5rem;
+  }
+  .gender {
+    font-family: "Bellota";
+    color: #303030;
+    width: 5rem;
+  }
+  input {
+    color: #303030;
+    font-family: "Bellota";
+  }
+  select {
+    font-family: "Bellota";
+    color: #303030;
+  }
+  .submit {
+    font-family: "Bellota";
+    color: #303030;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  h3 {
+    font-family: "Bellota";
+    color: #0D8187;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  h4 {
+    font-family: "Bellota";
+    color: #0D8187;
+    font-size: 8px;
+    font-weight: bold;
+    margin-left: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */

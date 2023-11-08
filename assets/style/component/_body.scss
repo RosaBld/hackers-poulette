@@ -15,24 +15,14 @@ body {
         padding:50px 00px 50px 50px;
         background: #0D8187;
         margin-bottom: 50px;
-        
-        .labels {
-            font-family: 'Bellota';
-            color: #303030;
-            width: 5rem;
-        }
     
         input {
             border-radius: 5px;
-            color: #303030;
-            font-family: 'Bellota';
             margin-bottom: 10px;
         }
     
         select {
             border-radius: 5px;
-            font-family: 'Bellota';
-            color: #303030;
             margin-bottom: 10px;
         }
     
@@ -51,41 +41,31 @@ body {
         background: #0D8187;
         margin: 0 auto;
         border-radius: 50px;
-        font-family: 'Bellota';
-        color: #303030;
-        font-size: 20px;
-        font-weight: bold;
     }
 }
 
 @media screen and (min-width: 768px) {
+    body {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
     .form {
-        padding: 5%;
+        padding: 1.5rem;
         align-items: flex-start;
         background: #0D8187;
-        margin: 5rem;
         border-radius: 1%;
-        max-width: 575px;
+        max-width: 600px;
         max-height: 515px;
         justify-content: center;
-        
-        .labels {
-            font-family: 'Bellota';
-            color: #303030;
-            width: 5rem;
-        }
     
         input {
             border-radius: 5px;
-            color: #303030;
-            font-family: 'Bellota';
             margin-bottom: 10px;
         }
     
         select {
             border-radius: 5px;
-            font-family: 'Bellota';
-            color: #303030;
             margin-bottom: 10px;
         }
     
@@ -102,8 +82,8 @@ body {
         }
     
         .message {
-            width: 450px;
-            height: 250px;
+            width: 570px;
+            height: 150px;
         }
     }
     
@@ -116,9 +96,6 @@ body {
         background: #0D8187;
         margin: 0 auto;
         border-radius: 50px;
-        font-family: 'Bellota';
-        color: #303030;
-        font-size: 20px;
-        font-weight: bold;
+        margin-top: 3rem;
     }
 }
