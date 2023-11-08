@@ -1,7 +1,7 @@
 <section class="footer">
     <div class="brand">
         <div class="hack">
-            <img src="assets/hackers-poulette-logo.png" alt="hacker-poulette-logo" class="imgfoot">
+            <img src="assets/images/hackers-poulette-logo.png" alt="hacker-poulette-logo" class="imgfoot">
             <h3>Hackers Poulette</h3>
         </div>
         <div class="logo">
@@ -13,7 +13,7 @@
     </div>
     <div class="copyright">
         <h4><i class="fa-regular fa-copyright"></i>All rights reserved</h4>
-        <img src="assets/becode-seal.png" alt="becode-logo" class="becode">
+        <img src="assets/images/becode-seal.png" alt="becode-logo" class="becode">
     </div>
 
 </section>
