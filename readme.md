@@ -12,7 +12,7 @@ Therefore, one of the instruction requiere the form to display a message alertin
 
 ## Screenshots
 
-![App Screenshot](assets/images/mockup.png)
+![./assets/images/mockup.png](https://raw.githubusercontent.com/RosaBld/hackers-poulette/main/assets/images/mockUp.png)
 
 ---
 
