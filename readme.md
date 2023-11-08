@@ -10,13 +10,20 @@ Therefore, one of the instruction requiere the form to display a message alertin
 
 ----
 
-## Screenshots
+## Tools
+
+![GITHUB](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+![VSCODE](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+
+---
+
+### Screenshots
 
 ![./assets/images/mockup.png](https://raw.githubusercontent.com/RosaBld/hackers-poulette/main/assets/images/mockUp.png)
 
 ---
 
-### Languages used
+#### Languages used
 
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
